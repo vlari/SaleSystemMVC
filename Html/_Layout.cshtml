@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/GlobalStyle.css" />
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#"><i class="far fa-user-circle my-icon"></i>Profile</a></li>
+        <li><a href="#"><i class="fas fa-cog my-icon"></i>Settings</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="fas fa-sign-out-alt my-icon"></i>LogOut</a></li>
+        <li>@Html.Partial("_LoginPartial")</li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#">Notifications</a></li>
+        <li class="divider"></li>
+        <li><a href="#">More</a></li>
+    </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper cyan">
+                <a href="@Url.Action("Index", "Home")" class="brand-logo">M</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#"><i class="material-icons dropdown-button" data-activates="dropdown2">notifications</i></a></li>
+                    <li><a href="#"><i class="material-icons dropdown-button" data-activates="dropdown1">account_circle</i></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="side-nav fixed main-side">
+        @*<li class="user-li">
+            <div class="user-view">
+                <div class="background">
+                </div>
+                <p class="no-margin"><span class="white-text name">John Doe</span></p>
+                <p class="no-margin"><span class="white-text email">Administrator</span></p>
+            </div>
+        </li>*@
+        <li class="lone">
+            <a href="@Url.Action("Index", "Home")"><i class="fas fa-home my-icon"></i>Title</a>
+        </li>
+        <li class="divider"></li>
+        <li class="lone subheader center-align">Features</li>
+        <li class="lone"><a class="waves-effect" href="@Url.Action("Index","Action")"><i class="fas fa-calculator my-icon"></i>Subtitle</a></li>
+        <li class="lone"><a class="waves-effect" href="@Url.Action("Index","Action")"><i class="fas fa-cart-plus my-icon"></i>Subtitle</a></li>
+        <li class="lone"><a class="waves-effect" href="@Url.Action("Index","Action")"><i class="fas fa-users my-icon"></i>Subtitle</a></li>
+        <li class="dropchange">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header head">
+                        <p style="margin:0px;padding-left:16px;"><i class="fas fa-id-card my-icon"></i>Title<i class="fa fa-angle-right changed"></i></p>
+                    </div>
+                    <div class="collapsible-body drop-body">
+                        <ul class="drop-body">
+                            <li><a class="waves-effect" href="@Url.Action("Index", "Action")">Subtitle</a></li>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Subtitle</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="dropchange">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header head">
+                        <p style="margin:0px;padding-left:16px;"><i class="fas fa-shopping-basket my-icon"></i>Title<i class="fa fa-angle-right changed"></i></p>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Subtitle</a></li>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Subtitle</a></li>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Subtitle</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="dropchange">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header head">
+                        <p style="margin:0px;padding-left:16px;"><i class="fas fa-briefcase my-icon"></i>Title<i class="fa fa-angle-right changed"></i></p>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Subtitle</a></li>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Subtitle</a></li>
+                            <li><a class="waves-effect" href="@Url.Action("Index","Action")">Ncf</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="lone"><a class="waves-effect" href="#"><i class="fas fa-clipboard-list my-icon"></i>Reports</a></li>
+    </ul>
+    <div class="container body-content">
+                @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/materialize.min.js"></script>
+    <script src="~/Scripts/fontawesome-all.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

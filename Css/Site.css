@@ -1,0 +1,90 @@
+﻿/*html{
+    
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Main styles*/
+#slide-out{
+  margin-top:64px;
+}
+
+#dropdown1, #dropdown2{
+  margin-top:64px;
+}
+
+.dropdown-content li > a{
+  color:#00bcd4 !important;
+}
+
+.side-nav li.active{
+  background-color:#00bcd4 !important;
+}
+
+.side-nav li.user-li.active{
+  background-color:#ac3973 !important;
+}
+
+ .side-nav li.active.lone a,.side-nav li.active ul li:first-child, .side-nav li.active.lone a svg, .side-nav li.active ul li div.collapsible-header p svg{
+  color:#FFFFFF !important;
+}
+
+.my-icon{
+  font-size:1.5em;
+  margin-right:14px;
+  color:#666666;
+}
+
+.changed{
+  margin-left:5px;
+  color:#666666;
+}
+
+.no-margin{
+  margin:0px;
+}
+
+.user-li{
+  background-color:#c6538c !important;
+}
+
+ /* label focus color */
+.input-field input[type=text]:focus + label {
+     color: #00bcd4 !important;
+}
+
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #00bcd4 !important;
+     box-shadow: 0 1px 0 0 #000;
+   }
+
+.position-absolute{
+    position:absolute;
+}
+
+td{
+    height:70px;
+}
